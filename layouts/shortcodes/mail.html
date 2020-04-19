@@ -1,0 +1,4 @@
+<span id="m{{ .Ordinal }}" style="font-style:italic;"></span>
+<script>
+  document.getElementById('m{{ .Ordinal }}').innerText = window.atob({{ .Get 0 | base64Encode }})
+</script>

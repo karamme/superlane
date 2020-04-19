@@ -1,0 +1,19 @@
+<head>
+    <title>{{ with .Title }}{{ . }} | {{ end }}{{ .Site.Title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ default .Site.Params.description .Description }}">
+
+    {{ with .OutputFormats.Get "RSS" -}}
+      {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+    {{- end }}
+
+    {{ partial "fonts.html" }}
+    <link href="https://unpkg.com/sanitize.css" rel="stylesheet">
+
+    {{- $options := (dict "targetPath" "css/main.css" "enableSourceMap" (eq hugo.Environment "development")) -}}
+    {{ $main := resources.Get "scss/main.scss" | toCSS $options | fingerprint }}
+    <link rel="stylesheet" href="{{ $main.RelPermalink }}" integrity="{{ $main.Data.Integrity }}">
+
+    {{ partial "script.html" . }}
+</head>

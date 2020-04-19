@@ -1,0 +1,32 @@
+//
+// Variables
+//
+
+// Typographie
+$font-family-text: sans-serif;
+$font-family-monospace: monospace;
+
+$font-size-mobile: 18px;
+$font-size-desktop: calc(16.2px + .25vw);
+
+// Colors
+$color-accent: #2f8475;
+
+$color-text: #2a2a2a;
+$color-text-accent: $color-accent;
+$color-text-muted: lighten($color-text, 45%);
+$color-text-white: #ffffff;
+
+// Breakpoints
+$breakpoint-desktop: 900px;
+
+// Padding and Spaces
+$padding: 1.25rem;
+
+// Widhts
+$content-width: 35rem;
+
+// CSS Variables
+:root {
+  --contentWidth: $content-width;
+}

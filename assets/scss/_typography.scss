@@ -1,0 +1,68 @@
+//
+// TYPOGRAPHY
+//
+
+// Base
+html {
+  font-size: $font-size-mobile;
+  font-family: $font-family-text;
+  @include desktop { font-size: $font-size-desktop; }
+}
+
+body {
+  color: $color-text;
+}
+
+code, kbd, samp, pre {
+  font-family: $font-family-monospace;
+}
+
+// Font Sizes
+h2 { font-size: 1.75rem; }
+h3 { font-size: 1.5rem; }
+h4 { font-size: 1.25rem; }
+
+// Line Heights
+html { line-height: 1.5; }
+h1, h2, h3, h4, h5, h6 { line-height: 1.25; }
+caption, figcaption, label, legend { line-height: 1.375; }
+
+// Spacing
+h2 {
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+h4, h5, h6 {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+h2 + h3,
+h2 + h4 {
+  margin-top: 1.5rem;
+}
+
+h4 + p,
+h4 + ul {
+  margin-top: 0.5rem;
+}
+
+// Links
+a {
+  color: inherit;
+}
+a:hover {
+  color: $color-text-accent;
+}
+a:focus {
+  outline:none;
+}
+a::-moz-focus-inner {
+  border:0;
+}

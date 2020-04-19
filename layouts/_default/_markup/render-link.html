@@ -1,0 +1,10 @@
+<a href="{{ .Destination | safeURL }}"{{ with .Title}} title="{{ . }}"{{ end }}
+  {{- if strings.HasPrefix .Destination "http" -}}
+  target="_blank">
+  {{ $text := split (replaceRE "\n" " " .Text) " " }}
+  {{ $n := sub (len $text) 1 }}
+  {{ delimit (first $n $text) " " }}
+  <span class="nowrap">{{ index (last 1 $text) 0 }}<svg class="external-link"><use xlink:href="#external-link" /></svg></span></a>
+  {{- else -}}
+  >{{ .Text }}</a>
+  {{- end -}}

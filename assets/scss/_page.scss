@@ -1,0 +1,61 @@
+//
+// PAGE
+//
+
+.update {
+  color: $color-text-muted;
+  font-size: 80%;
+  margin-bottom: 2rem;
+}
+
+#icons {
+  display: none;
+}
+
+a {
+  text-decoration-color: $color-text-accent;
+  text-decoration-thickness: 2px;
+}
+
+img {
+  display: block;
+  margin: 2rem auto;
+  max-width: 100%;
+}
+
+img.svg {
+  margin: 3rem auto;
+}
+
+a.anchor {
+  opacity: 0;
+  text-decoration: none;
+  font-weight: normal;
+  margin-left: .2em;
+  transition: opacity 200ms ease-in-out;
+}
+
+.anchor_icon {
+  height: .8em;
+  width: .8em;
+  transform: translateY(-.2rem);
+  color: $color-text-muted;
+
+  a.anchor:hover & {
+    color: $color-text-accent;
+  }
+}
+
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor {
+  opacity: 1;
+}
+
+.external-link {
+  width: .8em;
+  height: .8em;
+  display: inline;
+  margin-left: .2em;
+  margin-bottom: .15em;
+}

@@ -1,0 +1,3 @@
+<p>
+  <img src="{{ .Destination | safeURL }}" alt="{{ .Text }}" {{ with .Title}} title="{{ . }}"{{ end }} {{ if strings.HasSuffix .Destination "svg" }}class="svg"{{ end }} />
+</p>

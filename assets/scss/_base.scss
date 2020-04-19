@@ -1,0 +1,79 @@
+//
+// BASE CLASSES
+//
+
+html, body {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+main {
+  width: $content-width;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 $padding;
+
+  hr {
+    width: 100%;
+    border: 1px solid lighten($color-text, 75%);
+    margin: 2rem 0;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-top: 2rem;
+    font-weight: 900;
+
+    @include desktop() {
+      font-size: 3rem;
+      margin-top: 5rem;
+    }
+  }
+}
+
+.description {
+  font-style: italic;
+}
+
+.button {
+  display: inline-block;
+  text-decoration: none;
+  color: $color-text-accent;
+  border: 1px solid $color-accent;
+  border-radius: 4px;
+  padding: 7px 16px;
+  margin: 1em 0;
+  font-size: 80%;
+  font-weight: bold;
+
+  &:hover,
+  &:focus {
+    background: $color-accent;
+    color: $color-text-white;
+  }
+}
+
+input[type="text"] {
+  border: 1px solid $color-text-muted;
+  border-radius: 4px;
+  padding: 7px 7px;
+  font-family: inherit;
+  color: inherit;
+  &:focus {
+    outline: none !important;
+  border: 1px solid $color-accent;
+  }
+}
